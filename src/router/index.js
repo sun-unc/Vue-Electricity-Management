@@ -23,7 +23,8 @@ const router = new VueRouter({
           component: () => import('@/components/Welcome.vue')
         },
         {
-          path: '/users'
+          path: '/users',
+          component: () => import('@/components/user/Users.vue')
         },
         {
           path: '/roles'

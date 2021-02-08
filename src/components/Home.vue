@@ -25,6 +25,7 @@
             :collapse="isCollapse"
             :collapse-transition="false"
             router
+            :default-active="activePath"
           >
             <!-- 一级菜单 -->
             <el-submenu
@@ -40,11 +41,11 @@
                 <span>{{ item.authName }}</span>
               </template>
               <!-- 二级菜单 -->
-
               <el-menu-item
                 :index="'/' + key.path"
                 v-for="key in item.children"
                 :key="key.id"
+                @click="saveNavItem('/' + key.path)"
               >
                 <template slot="title">
                   <i class="el-icon-menu"></i>
@@ -77,7 +78,8 @@ export default {
         102: 'iconfont icon-danju',
         145: 'iconfont icon-baobiao'
       },
-      isCollapse: false
+      isCollapse: false,
+      activePath: ''
     }
   },
   methods: {
@@ -94,10 +96,14 @@ export default {
     },
     toggleCollapse () {
       this.isCollapse = !this.isCollapse
+    },
+    saveNavItem (path) {
+      window.sessionStorage.setItem('activePath', path)
     }
   },
   created () {
     this.getMenuList()
+    this.activePath = window.sessionStorage.getItem('activePath')
   }
 }
 </script>
@@ -161,6 +167,9 @@ export default {
   background-color: #686868;
   letter-spacing: 0.2em;
   font-size: 10px;
+}
+.el-main {
+  line-height: 30px;
 }
 // @keyframes menufade {
 //   0% {
