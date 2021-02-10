@@ -27,10 +27,12 @@ const router = new VueRouter({
           component: () => import('@/components/user/Users.vue')
         },
         {
-          path: '/roles'
+          path: '/roles',
+          component: () => import('@/components/power/Roles.vue')
         },
         {
-          path: '/rights'
+          path: '/rights',
+          component: () => import('@/components/power/Rights.vue')
         },
         {
           path: '/goods'
