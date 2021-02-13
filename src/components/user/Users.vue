@@ -459,7 +459,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style lang="less" scoped>
 .form-group {
   text-align: left;
 }

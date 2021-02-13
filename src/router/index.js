@@ -35,7 +35,8 @@ const router = new VueRouter({
           component: () => import('@/components/power/Rights.vue')
         },
         {
-          path: '/goods'
+          path: '/categories',
+          component: () => import('@/components/goods/Cate.vue')
         },
         {
           path: '/params'
