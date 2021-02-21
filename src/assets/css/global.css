@@ -19,6 +19,7 @@ body,
 
 .el-table {
   margin-top: 15px;
+  font-size: 12px;
 }
 
 .el-cascader-panel {
@@ -27,4 +28,16 @@ body,
 
 .el-main {
   text-align: inherit !important;
+}
+
+.el-steps {
+  margin: 15px 0;
+}
+
+.el-step__title {
+  font-size: 13px;
+}
+
+.ql-editor {
+  min-height: 300px;
 }
