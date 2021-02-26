@@ -55,7 +55,8 @@ const router = new VueRouter({
           component: () => import('@/components/order/Order.vue')
         },
         {
-          path: '/reports'
+          path: '/reports',
+          component: () => import('@/components/report/Report.vue')
         }
       ]
     }
